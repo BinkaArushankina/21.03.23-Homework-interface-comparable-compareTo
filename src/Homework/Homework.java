@@ -31,7 +31,7 @@ public class Homework {
         Area square = new Square("Square",5);
         Area rectangle = new Rectangle("Rectangle",5,10);
         Area circle = new Circle("Circle",5);
-        Area area = new Area("Area");
+
 
         Area[] areas = {square,circle,rectangle};
         for(Area a:areas){

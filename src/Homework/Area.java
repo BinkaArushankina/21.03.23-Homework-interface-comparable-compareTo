@@ -1,6 +1,6 @@
 package Homework;
 
-public class Area implements Comparable<Area>{
+public abstract class  Area implements Comparable<Area>{
 
     private String displayName;
 
@@ -9,9 +9,7 @@ public class Area implements Comparable<Area>{
         this.displayName = displayName;
     }
 
-    public double getArea(){
-        return 0;
-    }
+    public abstract double getArea();
 
     public String getDisplayName(){
         return displayName;
@@ -24,11 +22,17 @@ public class Area implements Comparable<Area>{
     //В задаче из урока 40 вывести на печать массив, отсортированный по возрастанию площади фигур.
 
     public int compareTo(Area a){
-        return Integer.compare((int) getArea(), (int) a.getArea());
+        //return Double.compare( getArea(), a.getArea());// mogut bitj problemi
+        if(getArea()-a.getArea()>0) {
+            return 1;
+        }else if (getArea()-a.getArea()<0) {
+            return -1;
+        }
+        return 0;
     }
 
     public String toString() {
-        return  displayName;
+        return  displayName+getArea();
     }
 
 
