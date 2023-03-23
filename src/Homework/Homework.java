@@ -47,19 +47,35 @@ public class Homework {
 
 
 
-
+        //SORTING
         //Dopolnitelnoe domaschnee sadanie po usche gotowoj sadatsche
         //Homework 21.03.23
         //В задаче из урока 40 вывести на печать массив, отсортированный по возрастанию площади фигур.
 
 
         Arrays.sort(areas);
-        System.out.println(Arrays.toString(areas));   //[Square, Rectangle, Circle]
+        System.out.println(Arrays.toString(areas));   //[Square25.0, Rectangle50.0, Circle78.5]
 
 
 
         //array                  Arrays.sort(name);         sout(Arrays.toString(name));
         //list                   Collections.sort(name);    sout(name);
         //treeSet and hashSet                               sout(name);
+
+
+
+
+        //TESTING
+        //Escho Dopolnitelnoe domaschnee sadanie po usche gotowoj sadatsche
+        /*
+В задаче из прошлого дз про интерфейс Shape добавить метод, позволяющий высчитывать общую площадь
+разных фигур totalSquare(). Пример: площадь прямоугольника 100, площад круга 50, общая площадь 150
+Написать этот метод в классе ShapeCalculator
+Протестировать этот метод с помощью JUnit
+     */
+        System.out.println("\nTotalSquare is: "+ShapeCalculator.totalSquare(circle.getArea(),
+                                               rectangle.getArea(),square.getArea()));//TotalSquare is: 153.5
+
+
     }
 }
