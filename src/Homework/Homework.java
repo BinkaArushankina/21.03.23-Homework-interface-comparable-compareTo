@@ -73,8 +73,7 @@ public class Homework {
 Написать этот метод в классе ShapeCalculator
 Протестировать этот метод с помощью JUnit
      */
-        System.out.println("\nTotalSquare is: "+ShapeCalculator.totalSquare(circle.getArea(),
-                                               rectangle.getArea(),square.getArea()));//TotalSquare is: 153.5
+
 
 
     }

@@ -5,19 +5,33 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ShapeCalculatorTest {
     ShapeCalculator shapeCalculator;
 
     @BeforeEach
-    void  setUp(){
+    void  init(){
         shapeCalculator=new ShapeCalculator();
     }
     @Test
-    @DisplayName("find the totalSquare of all figures")
-    void totalSquareTest(){
-        assertEquals(153.5,shapeCalculator.totalSquare(78.5,50.0,
-                                                                         25.0),"78,5+50+25 should be 153,5");
-    }                                                                       //Tests passed:1
+    public void test_two_shapes(){
+        Area[]shapes={new Circle("Circle",10),new Rectangle("Rectangle",5,10)};
+        assertEquals(364,shapeCalculator.totalSquare(shapes));
+
+    }
+    @Test
+    public void test_one_shape(){
+        Area[] shapes = {new Rectangle("Rectangle",5,10)};
+        assertEquals(50,shapeCalculator.totalSquare(shapes));
+    }
+    @Test
+    public void test_zero_shape(){
+        Area [] shapes = {};
+        assertEquals(0,shapeCalculator.totalSquare(shapes));
+    }
+
+
+
 }
